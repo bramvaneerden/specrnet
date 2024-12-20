@@ -1,43 +1,12 @@
-# SpecRNet
+# SpecRnet application to ASVspoof2019
+Code for the Audio Processing & Indexing course project. Applying SpecRnet to ASVspoof2019 LA dataset and analyzing results.
 
-The following repository contains architecture of SpecRNet model from the paper called "SpecRNet: Towards Faster and More Accessible Audio DeepFake Detection".
+Inspired by the paper by Kawa et al. : https://arxiv.org/abs/2210.06105
 
-Paper link: https://arxiv.org/abs/2210.06105
+Data can be downloaded from asvspoof.org : https://datashare.ed.ac.uk/handle/10283/3336
 
-## Before you start
+train_asvspoof.py trains the model once
 
-### Dependencies
+run_multiple.py runs specrnet 5 times and evaluates 5 times on different random seeds.
 
-Install required dependencies using:
-```bas
-pip install -r requirements.txt
-```
-
-
-## Evaluation
-
-We provide the architecture along with:
-* time benchmark on batches of random inputs,
-* calculation of parameters' number.
-
-To run it please use:
-```bash
-python model.py
-```
-
-
-## Citation
-
-If you use this code in your research please use the following citation:
-
-```
-@INPROCEEDINGS{10063734,
-  author={Kawa, Piotr and Plata, Marcin and Syga, Piotr},
-  booktitle={2022 IEEE International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom)}, 
-  title={SpecRNet: Towards Faster and More Accessible Audio DeepFake Detection}, 
-  year={2022},
-  volume={},
-  number={},
-  pages={792-799},
-  doi={10.1109/TrustCom56396.2022.00111}}
-```
+analysis.py uses the best model from run_multiple.py to do more in-depth analysis of the results.
